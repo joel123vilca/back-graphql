@@ -1,8 +1,8 @@
-import {grahpQLServer} from 'grahpql-yoga';
+import {GraphQLServer} from 'graphql-yoga';
 import path from 'path';
-import resolvers from './grahpql/resolvers';
+import resolvers from './graphql/resolvers';
 
-const server = new grahpQLServer({
+export const server = new GraphQLServer({
     typeDefs: path.join(__dirname,'graphql/schema.graphql'),
     resolvers
 })
